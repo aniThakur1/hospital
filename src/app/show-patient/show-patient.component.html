@@ -1,0 +1,36 @@
+<div >
+<nav>
+    <input type="number" [value]="patientId"   (change)="getPatientId($event)" placeholder="show-patient" >
+    <button type="button" (click)="getData()" >Search</button> 
+</nav> 
+</div>
+<table class="table table-stripped">
+    <thead>
+        <tr>
+            <th>Patient name</th>
+            <th>Patient age</th>
+            <th>Visited Doctor Name</th>
+            <th>Date Of Visit</th>
+            <th>Prescription</th>
+        </tr>
+    </thead>
+
+
+    <tbody *ngIf = "patientDetails">
+        <tr>
+            <td>{{patientDetails.patientName}}</td>
+            <td>{{patientDetails.patientName}}</td>
+            <td>{{patientDetails.visitedDoctor}}</td>
+            <td>{{patientDetails.dateOfVisit}}</td>
+            <td>{{patientDetails.doctorPrescription}}</td>
+            
+            
+        </tr>
+    </tbody>
+
+
+<div *ngIf = "!patientDetails">
+    No records found
+</div>
+</table>
+

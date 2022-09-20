@@ -1,0 +1,33 @@
+<div class="col-md-6 offset-md-3">
+    <h3>Create Doctor</h3>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label ></label>
+            <input placeholder="Enter doctor Id" type="text" name="doctorId" id="doctorId" class="form-control" [(ngModel)]="doctor.doctorId">
+        </div>
+
+        <div class="form-group">
+            <label ></label>
+            <input placeholder="Enter doctor name" type="text" name="doctorName" id="doctorName" class="form-control" [(ngModel)]="doctor.doctorName">
+        </div>
+        <div class="form-group">
+            <label ></label>
+            <input placeholder="Enter age" type="text" name="age" id="age" class="form-control" [(ngModel)]="doctor.age">
+        </div>
+        <div class="form-group">
+            <label ></label>
+            <input placeholder="Enter gender" type="text" name="gender" id="gender" class="form-control" [(ngModel)]="doctor.gender">
+        </div>
+        <div class="form-group">
+            <label ></label>
+            <input placeholder="Enter specialization" type="text" name="specialization" id="specialization" class="form-control" [(ngModel)]="doctor.specialization">
+        </div>
+        <div class="form-group">
+            <label ></label>
+            <input placeholder="Patient attended" type="text" name="numberOfPatientattended" id="numberOfPatientattended" class="form-control" [(ngModel)]="doctor.numberOfPatientattended">
+        </div>
+       
+    
+        <button class="btn btn-success" type="submit">Submit</button>
+    </form>
+    </div>

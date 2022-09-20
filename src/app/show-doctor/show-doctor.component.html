@@ -1,0 +1,40 @@
+
+    <div class="form-group">
+
+
+        <select  (change)="changeWebsite($event)">
+
+                     <option >Choose Doctor</option>
+
+            <option *ngFor="let doc of doctor">{{doc.doctorName}}</option>
+
+        </select>
+
+      
+
+    </div>
+
+  
+
+
+
+
+
+
+<table class="table table-stripped">
+    <thead>
+        <tr>
+            
+            <th>Doctor Name</th>
+            <th>specialization</th>
+            <th>Number of patient attended</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngIf = "doctorDetails" >
+            
+            <td>{{doctorDetails.doctorName}}</td>
+            <td>{{doctorDetails.specialization}}</td>  
+            <td>{{doctorDetails.numberOfPatientattended}}</td>    
+        </tr>
+    </tbody>
